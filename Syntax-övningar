@@ -1,0 +1,71 @@
+--SELECT
+    --1.Skapa en query för att ta fram en lista på alla unika gender som existerar i databasen.
+        --SELECT DISTINCT gender FROM persons
+    --1.Skapa en query för att ta fram en lista på alla unika gender som existerar i databasen.
+    
+    --2.Skapa en query för att ta fram alla personer med ett specifikt gender.
+        --SELECT * FROM persons WHERE gender="Male"
+    --2.Skapa en query för att ta fram alla personer med ett specifikt gender.
+    
+    --3.Skapa en query för att ta reda på hur många personer som har det specifika gender
+        --SELECT COUNT(gender) FROM persons WHERE gender="Male" 
+    --3.Skapa en query för att ta reda på hur många personer som har det specifika gender
+
+    --4.Skapa en query för att ta reda på hur många personer som INTE har det specifika gender.
+        --SELECT COUNT(gender) FROM persons WHERE gender NOT IN("Male")
+    --4.Skapa en query för att ta reda på hur många personer som INTE har det specifika gender.
+    
+    --5.Skapa en query för att ta reda på hur många male och female det finns i databasen.
+        --SELECT COUNT(gender) FROM persons WHERE gender IN("Male","Female")
+    --5.Skapa en query för att ta reda på hur många male och female det finns i databasen.
+    
+    --6.Skapa en query för att ta reda på hur många som inte identifierar sig som male och female i databasen.
+        --SELECT COUNT(gender) FROM persons WHERE gender NOT IN("Male","Female")
+    --6.Skapa en query för att ta reda på hur många som inte identifierar sig som male och female i databasen.
+    
+    --7.Välj ett first_name ifrån listan och skapa en query för att ta fram hur många persone det finns med just det first_name.
+        --SELECT COUNT(first_name) FROM persons WHERE first_name IN("Borg")
+    --7.Välj ett first_name ifrån listan och skapa en query för att ta fram hur många persone det finns med just det first_name.
+
+    --8.Om ni inte hittar flera personer med samma namn, skriv då en query för att ta fram alla personer som börjar på de två första bokstäverna i det valda namnet.
+        --SELECT * FROM persons WHERE first_name LIKE "Bo%"
+    --8.Om ni inte hittar flera personer med samma namn, skriv då en query för att ta fram alla personer som börjar på de två första bokstäverna i det valda namnet.
+
+    --9.Skapa en query för att ta fram den äldsta åldern i databasen.
+        --SELECT AGE FROM persons  ORDER BY AGE DESC LIMIT 1
+    --9.Skapa en query för att ta fram den äldsta åldern i databasen.
+
+    --10.Skapa en query för att ta fram alla personer som har den åldern.
+        --SELECT * FROM persons  WHERE AGE="99"
+    --10.Skapa en query för att ta fram alla personer som har den åldern.
+
+    --11.Skapa en query för att ta fram medelvärdet på alla åldrarna.
+        --SELECT avg(AGE) FROM persons 
+    --11.Skapa en query för att ta fram medelvärdet på alla åldrarna.
+    
+    --12.Skapa en query för att ta fram antalet personer som kommer ifrån de olika länderna.
+        --SELECT COUNT(country),country FROM persons GROUP BY country ORDER BY COUNT(country) ASC;
+    --12.Skapa en query för att ta fram antalet personer som kommer ifrån de olika länderna.
+
+    --13.Skapa en query för att ta fram alla personer ifrån det landet som har flest antal personer och sortera de efter age.
+        SELECT *,COUNT(country) FROM persons GROUP BY country  
+    --13.Skapa en query för att ta fram alla personer ifrån det landet som har flest antal personer och sortera de efter age.
+    
+    --14.Skapa en query för att ta fram totalåldern av alla personer i databasen.
+        --SELECT sum(AGE) FROM persons 
+    --14.Skapa en query för att ta fram totalåldern av alla personer i databasen.
+
+    --15.Skapa en query för att ta fram alla personer mellan ålden 20 och 50 år samt sortera de efter country och title.
+        --SELECT * FROM persons WHERE age>=20 AND age<=50 ORDER BY country,title DESC ;
+    --15.Skapa en query för att ta fram alla personer mellan ålden 20 och 50 år samt sortera de efter country och title.
+
+
+    --16.Skapa en query för att ta fram personen med id = 658.
+        --SELECT * FROM persons WHERE id=658; 
+    --16.Skapa en query för att ta fram personen med id = 658.
+
+
+--INSERT & UPDATE
+--INSERT & UPDATE
+--DELETE
+--DELETE
