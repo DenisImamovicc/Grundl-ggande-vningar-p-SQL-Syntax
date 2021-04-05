@@ -48,7 +48,7 @@
     --12.Skapa en query för att ta fram antalet personer som kommer ifrån de olika länderna.
 
     --13.Skapa en query för att ta fram alla personer ifrån det landet som har flest antal personer och sortera de efter age.
-        SELECT *,COUNT(country) FROM persons GROUP BY country  
+        --SELECT *,COUNT(country) FROM persons GROUP BY  
     --13.Skapa en query för att ta fram alla personer ifrån det landet som har flest antal personer och sortera de efter age.
     
     --14.Skapa en query för att ta fram totalåldern av alla personer i databasen.
@@ -59,13 +59,40 @@
         --SELECT * FROM persons WHERE age>=20 AND age<=50 ORDER BY country,title DESC ;
     --15.Skapa en query för att ta fram alla personer mellan ålden 20 och 50 år samt sortera de efter country och title.
 
-
     --16.Skapa en query för att ta fram personen med id = 658.
         --SELECT * FROM persons WHERE id=658; 
     --16.Skapa en query för att ta fram personen med id = 658.
 
-
 --INSERT & UPDATE
+    --1.Skapa en ny person med hjälp av en query.
+        --INSERT INTO persons (first_name,last_name) VALUES("Dick","Johnson")
+    --1.Skapa en ny person med hjälp av en query.
+
+    --2.Uppdatera personen med id = 345 till att ha samma för- och efternamn som dig själv.
+        --UPDATE persons SET first_name='Denis',last_name='Imamovic' WHERE id=345
+    --2.Uppdatera personen med id = 345 till att ha samma för- och efternamn som dig själv.
+    
+    --3.Uppdatera alla personer som kommer ifrån Sverige att ha title = “Viking”
+        --UPDATE persons SET title='Viking' WHERE country='Sweden'
+    --3.Uppdatera alla personer som kommer ifrån Sverige att ha title = “Viking”
+
+    --4.Uppdatera alla personer som är mellan 65 - 99 år gamla att ha title = “Retired”
+        --UPDATE persons SET title='Retired' WHERE age>=65 AND age<=99
+    --4.Uppdatera alla personer som är mellan 65 - 99 år gamla att ha title = “Retired”
 --INSERT & UPDATE
 --DELETE
+    --1.Skapa en query för att ta bort personen med id = 666.
+        --SELECT * FROM persons WHERE id=666
+        --DELETE FROM persons WHERE id=666
+    --1.Skapa en query för att ta bort personen med id = 666.
+    
+    --2.Skapa en query för att ta bort personen med id = 666.
+        --SELECT * FROM persons WHERE age>=1 AND age<=17
+        --DELETE FROM persons WHERE age>=1 AND age<=17
+    --2.Skapa en query för att ta bort personen med id = 666.
+    
+    --3.Skapa en query för att ta bort alla personer ifrån Portugal.
+        --SELECT * FROM persons WHERE country="Portugal"
+        --DELETE FROM persons WHERE country="Portugal"
+    --3.Skapa en query för att ta bort alla personer ifrån Portugal.
 --DELETE
